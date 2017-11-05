@@ -1,0 +1,23 @@
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <p>Hello</p>
+        <form>
+        	<input name= "search">
+        	<button>szukaj</button>
+        </form>
+        {% for movie in movies %}
+    	<div>
+    		id: {{ movie.id }};
+    		title: {{ movie.title }};
+    		director: {{ movie.director }};
+    		production_date: {{ movie.production_date }};
+    		clean_data_production: {{ movie.clean_data_production }};
+    	</div>
+    	{%empty%}
+    	nie ma takiego filmu
+		{% endfor %}
+    </body>
+</html>
